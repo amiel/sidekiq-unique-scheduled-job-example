@@ -26,12 +26,12 @@ This repository is to demonstrate mhenrixon/sidekiq-unique-jobs#93.
    This way you can easily enqueue jobs that should be unique or match previous jobs.
 
    ```ruby
-   Worker.perform_async 1
+   MyWorker.perform_async 1
    # => jid
-   Worker.perform_async 1
+   MyWorker.perform_async 1
    # WARN: payload is not unique
    # => nil
-   Worker.perform_in 1, 2
+   MyWorker.perform_in 1, 2
    # => jid
    ```
 
